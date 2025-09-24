@@ -1,6 +1,7 @@
 import express, { Request, Response } from "express";
 import "dotenv/config";
-import dbConnection from './config/mongo.config';
+import dbConnection from './config/database/mongo.config';
+import router from './components/index.routes';
 
 const app = express();
 
@@ -13,5 +14,6 @@ app.get("/health", (_req: Request, res: Response) => {
 });
 
 
+app.use("/api", router);
 
 export default app;

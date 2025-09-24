@@ -44,9 +44,13 @@ image: wispok-test
       - "27017:27017" --> puerto de mongo
 ```
 
-`PORT=3000`
-`DB_URI=mongodb://mongo:27017/payment-wispok`
-`SECRET_HASH="@WispokSecretHash"`
+## Variables de entorno
+
+```env
+PORT=3000
+DB_URI=mongodb://mongo:27017/payment-wispok
+SECRET_HASH="@WispokSecretHash"
+```
 
 # Ejemplos curl
 
